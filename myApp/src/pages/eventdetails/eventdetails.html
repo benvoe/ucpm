@@ -1,0 +1,74 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Events</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-content>
+            <ion-card-title>
+                Eventdetails
+            </ion-card-title>
+            <!--
+            <img src="img/run.jpg"/>
+            -->
+            <p>
+                Eventbeschreibung
+            </p>
+        </ion-card-content>
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="danger" icon-left (click)="ButtonBeitreten_Click()">
+			  <ion-icon name='add'></ion-icon>
+			  {{beitreten}}
+			</button>
+            </ion-col>
+            <ion-col text-right>
+                <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='share-alt'></ion-icon>
+          Einladen
+        </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <ion-card-title>
+                Teilnehmer
+            </ion-card-title>
+            <ion-label>Bisher {{teilnehmer}} Teilnehmer</ion-label>
+        </ion-card-content>
+    </ion-card>
+    <!--
+    <ion-card>
+        <ion-card-content>
+            <ion-card-title>
+                Kommentare
+            </ion-card-title>
+            <p>
+                0 Kommentare
+            </p>
+        </ion-card-content>
+        <ion-item-divider> </ion-item-divider>
+        <ion-item>
+            <ion-label floating>Namen einfügen</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Kommentar einfügen</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="danger" icon-left>
+				  <ion-icon name='add'></ion-icon>
+				  Kommentar hinzufügen
+				</button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+-->
+</ion-content>

@@ -7,7 +7,8 @@ import { MyApp } from './app.component';
 //import { ContactPage } from '../pages/contact/contact';
 //import { HomePage } from '../pages/home/home';
 import { EventPage } from '../pages/event/event';
-import { AddEventPage } from '../pages/add_event/add_event'
+import { AddEventPage } from '../pages/add_event/add_event';
+import { EventDetailPage } from '../pages/eventdetails/eventdetails';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -24,6 +25,7 @@ import { IonicStorageModule } from '@ionic/storage';
     //HomePage,
     EventPage,
     AddEventPage,
+    EventDetailPage,
     ProfilePage,
     TabsPage
   ],
@@ -40,6 +42,7 @@ import { IonicStorageModule } from '@ionic/storage';
     //HomePage,
     EventPage,
     AddEventPage,
+    EventDetailPage,
     ProfilePage,
     TabsPage
   ],
