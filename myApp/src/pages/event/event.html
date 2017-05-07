@@ -5,144 +5,140 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-card>
-        <ion-list>
-            <button ion-item [navPush]="pushPage">
-      <ion-icon name="add" item-left></ion-icon>
-      Event hinzufügen
-    </button>
-        </ion-list>
-    </ion-card>
-    <ion-card>
-        <!--
-        <img src="img/jogging.jpg" />
-        -->
-        <ion-card-content>
-            <ion-card-title>
-                Joggen am Donnerstag
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-        <ion-row no-padding>
-            <ion-col>
-                <button ion-button clear small color="danger" icon-left>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12>
+                <ion-card>
+                    <ion-list>
+                        <button ion-item [navPush]="NewEvent">
+                        <ion-icon name="add" item-left></ion-icon>
+                        Event hinzufügen
+                        </button>
+                    </ion-list>
+                </ion-card>
+            </ion-col>
+            <ion-col col-12 col-lg-6>
+                <ion-card>
+                    <div class="img-container">
+                        <img src="img/jogging.jpg" />
+                    </div>
+                    <ion-card-content>
+                        <ion-card-title>
+                            Joggen am Donnerstag
+                        </ion-card-title>
+                        <p>
+                            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+                        </p>
+                    </ion-card-content>
+                    <ion-row text-center class="button-col">
+                        <ion-col>
+                            <button ion-button clear small color="danger" (click)="_clickMich()" icon-left>
+                            <ion-icon name='add'></ion-icon>
+                            Beitreten
+                            </button>
+                        </ion-col>
+                        <ion-col text-center>
+                            <button ion-button clear small color="danger" [navPush]="EventInfo" icon-left>
+                            <ion-icon name='information-circle'></ion-icon>
+                            Details
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </ion-col>
+            <ion-col col-12 col-lg-6>
+                <ion-card>
+                    <div class="img-container">
+                        <img src="img/berlin.jpg" />
+                    </div>
+                    <ion-card-content>
+                        <ion-card-title>
+                            Filmabend in Berlin
+                        </ion-card-title>
+                        <p>
+                            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+                        </p>
+                    </ion-card-content>
+                    <ion-row text-center>
+                        <ion-col>
+                            <button ion-button clear small color="danger" icon-left>
+                            <ion-icon name='add'></ion-icon>
+                            Beitreten
+                            </button>
+                        </ion-col>
+                        <ion-col class="button-col" text-center>
+                            <button ion-button clear small color="danger" icon-left>
+                            <ion-icon name='information-circle'></ion-icon>
+                            Details
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </ion-col>
+
+            <ion-col col-12 col-lg-6>
+                <ion-card>
+                    <div class="img-container">
+                        <img src="img/sunset.jpg" />
+                    </div>
+                    <ion-card-content>
+                        <ion-card-title>
+                            Spaziergang bei Sonnenuntergang
+                        </ion-card-title>
+                        <p>
+                            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+                        </p>
+                    </ion-card-content>
+                    <ion-row text-center>
+                        <ion-col>
+                            <button ion-button clear small color="danger" icon-left>
           <ion-icon name='add'></ion-icon>
           Beitreten
         </button>
-            </ion-col>
-            <ion-col text-center>
-                <button ion-button clear small color="danger" icon-left>
+                        </ion-col>
+                        <ion-col text-center>
+                            <button ion-button clear small color="danger" icon-left>
           <ion-icon name='information-circle'></ion-icon>
           Details
         </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
             </ion-col>
-            <ion-col text-right>
-                <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-            </ion-col>
-        </ion-row>
-    </ion-card>
-    <ion-card>
-        <!--
-        <img src="img/berlin.jpg" />
-        -->
-        <ion-card-content>
-            <ion-card-title>
-                Filmabend in Berlin
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-        <ion-row no-padding>
-            <ion-col>
-                <button ion-button clear small color="danger" icon-left>
+
+            <ion-col col-12 col-lg-6>
+                <ion-card>
+                    <div class="img-container">
+                        <img src="img/ski.jpg" />
+                    </div>
+                    <ion-card-content>
+                        <ion-card-title>
+                            Ski fahren
+                        </ion-card-title>
+                        <p>
+                            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+                        </p>
+                    </ion-card-content>
+                    <ion-row text-center>
+                        <ion-col>
+                            <button ion-button clear small color="danger" icon-left>
           <ion-icon name='add'></ion-icon>
           Beitreten
         </button>
-            </ion-col>
-            <ion-col text-center>
-                <button ion-button clear small color="danger" icon-left>
+                        </ion-col>
+                        <ion-col text-center>
+                            <button ion-button clear small color="danger" icon-left>
           <ion-icon name='information-circle'></ion-icon>
           Details
         </button>
-            </ion-col>
-            <ion-col text-right>
-                <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
             </ion-col>
         </ion-row>
-    </ion-card>
-    <ion-card>
-        <!--
-        <img src="img/sunset.jpg" />
-        -->
-        <ion-card-content>
-            <ion-card-title>
-                Spaziergang bei Sonnenuntergang
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-        <ion-row no-padding>
-            <ion-col>
-                <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='add'></ion-icon>
-          Beitreten
-        </button>
-            </ion-col>
-            <ion-col text-center>
-                <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='information-circle'></ion-icon>
-          Details
-        </button>
-            </ion-col>
-            <ion-col text-right>
-                <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-            </ion-col>
-        </ion-row>
-    </ion-card>
-    <ion-card>
-        <!--
-        <img src="img/ski.jpg" />
-        -->
-        <ion-card-content>
-            <ion-card-title>
-                Ski fahren
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-        <ion-row no-padding>
-            <ion-col>
-                <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='add'></ion-icon>
-          Beitreten
-        </button>
-            </ion-col>
-            <ion-col text-center>
-                <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='information-circle'></ion-icon>
-          Details
-        </button>
-            </ion-col>
-            <ion-col text-right>
-                <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-            </ion-col>
-        </ion-row>
-    </ion-card>
+    </ion-grid>
+
+
+
+
 </ion-content>
