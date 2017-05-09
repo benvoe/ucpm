@@ -11,5 +11,10 @@ export class AddEventPage {
   constructor(public navCtrl: NavController) {
 
   }
+    public event = {
+    month: '2017-05-11',
+    timeStarts: '07:43',
+    timeEnds: '1990-02-20'
+  }
 
 }

@@ -19,8 +19,12 @@
             <ion-input type="text"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-label stacked>Ort &amp; Zeit</ion-label>
-            <ion-input type="date"></ion-input>
+            <ion-label floating>Ort</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Start Date</ion-label>
+            <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
         </ion-item>
         <ion-item>
             <button text-center ion-item>
