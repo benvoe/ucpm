@@ -59,6 +59,9 @@
                     </ion-row>
                 </ion-card>
             </ion-col>
+
+
+            
             <ion-col col-12 col-lg-6>
                 <ion-card>
                     <div class="img-container">
@@ -86,15 +89,15 @@
                             <ion-badge color="light" item-right>Hans Hänse</ion-badge>
                         </p>
                     </ion-card-content>
-                    <ion-row text-center>
+                    <ion-row text-center class="button-col">
                         <ion-col>
-                            <button ion-button clear small color="danger" icon-left>
+                            <button ion-button clear small color="danger" (click)="_clickMich()" icon-left>
                             <ion-icon name='add'></ion-icon>
                             Beitreten
                             </button>
                         </ion-col>
-                        <ion-col class="button-col" text-center>
-                            <button ion-button clear small color="danger" icon-left>
+                        <ion-col text-center>
+                            <button ion-button clear small color="danger" [navPush]="FilmabendInfo" icon-left>
                             <ion-icon name='information-circle'></ion-icon>
                             Details
                             </button>
@@ -129,18 +132,18 @@
                             <ion-badge color="light" item-right>Karla Kolumna</ion-badge>
                         </p>
                     </ion-card-content>
-                    <ion-row text-center>
+                    <ion-row text-center class="button-col">
                         <ion-col>
-                            <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='add'></ion-icon>
-          Beitreten
-        </button>
+                            <button ion-button clear small color="danger" (click)="_clickMich()" icon-left>
+                            <ion-icon name='add'></ion-icon>
+                            Beitreten
+                            </button>
                         </ion-col>
                         <ion-col text-center>
-                            <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='information-circle'></ion-icon>
-          Details
-        </button>
+                            <button ion-button clear small color="danger" [navPush]="SpaziergangInfo" icon-left>
+                            <ion-icon name='information-circle'></ion-icon>
+                            Details
+                            </button>
                         </ion-col>
                     </ion-row>
                 </ion-card>
@@ -172,18 +175,18 @@
                             <ion-badge color="light" item-right>Robert Peters</ion-badge>
                         </p>
                     </ion-card-content>
-                    <ion-row text-center>
+                    <ion-row text-center class="button-col">
                         <ion-col>
-                            <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='add'></ion-icon>
-          Beitreten
-        </button>
+                            <button ion-button clear small color="danger" (click)="_clickMich()" icon-left>
+                            <ion-icon name='add'></ion-icon>
+                            Beitreten
+                            </button>
                         </ion-col>
                         <ion-col text-center>
-                            <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='information-circle'></ion-icon>
-          Details
-        </button>
+                            <button ion-button clear small color="danger" [navPush]="SkiInfo" icon-left>
+                            <ion-icon name='information-circle'></ion-icon>
+                            Details
+                            </button>
                         </ion-col>
                     </ion-row>
                 </ion-card>

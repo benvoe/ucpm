@@ -3,9 +3,9 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-event',
-  templateUrl: 'eventdetails.html'
+  templateUrl: 'filmabend.html'
 })
-export class EventDetailPage {
+export class FilmabendDetailPage {
 
   pushPage: any;
   teilnehmer: number;

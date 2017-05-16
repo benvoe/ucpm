@@ -4,6 +4,11 @@ import { Storage } from '@ionic/storage';
 
 import { AddEventPage } from '../add_event/add_event';
 import { EventDetailPage } from '../eventdetails/eventdetails';
+// weitere statische Detailseiten
+import { FilmabendDetailPage } from '../otherevents/filmabend';
+import { SpaziergangDetailPage } from '../otherevents/spaziergang';
+import { SkiDetailPage } from '../otherevents/ski';
+// Ende Detailseiten
 import { EventData } from '../class/event_data';
 import { EventList } from '../class/event_list';
 
@@ -15,10 +20,16 @@ export class EventPage {
 
   NewEvent: any;
   EventInfo: any;
+  FilmabendInfo: any;
+  SpaziergangInfo: any;
+  SkiInfo: any;
 
   constructor(public navCtrl: NavController, public storage: Storage) {
     this.NewEvent = AddEventPage;
     this.EventInfo = EventDetailPage;
+    this.FilmabendInfo = FilmabendDetailPage;
+    this.SpaziergangInfo = SpaziergangDetailPage;
+    this.SkiInfo = SkiDetailPage;
   }
 
   _clickMich(){}
