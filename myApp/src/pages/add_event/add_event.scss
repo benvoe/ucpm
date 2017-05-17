@@ -1,1 +1,19 @@
 page-home {}
+
+@media (max-width: 768px) {
+    .item.mobile {
+        display: flex;
+    }
+    .item.desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .item.mobile {
+        display: none;
+    }
+    .item.desktop {
+        display: flex;
+    }
+}
