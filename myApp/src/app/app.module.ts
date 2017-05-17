@@ -9,6 +9,11 @@ import { MyApp } from './app.component';
 import { EventPage } from '../pages/event/event';
 import { AddEventPage } from '../pages/add_event/add_event';
 import { EventDetailPage } from '../pages/eventdetails/eventdetails';
+// weitere statische Detailseiten
+import { FilmabendDetailPage } from '../pages/otherevents/filmabend';
+import { SkiDetailPage } from '../pages/otherevents/ski';
+import { SpaziergangDetailPage } from '../pages/otherevents/spaziergang';
+// Ende Detailseiten
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -26,6 +31,9 @@ import { IonicStorageModule } from '@ionic/storage';
     EventPage,
     AddEventPage,
     EventDetailPage,
+    FilmabendDetailPage,
+    SpaziergangDetailPage,
+    SkiDetailPage,
     ProfilePage,
     TabsPage
   ],
@@ -43,6 +51,9 @@ import { IonicStorageModule } from '@ionic/storage';
     EventPage,
     AddEventPage,
     EventDetailPage,
+    FilmabendDetailPage,
+    SpaziergangDetailPage,
+    SkiDetailPage,
     ProfilePage,
     TabsPage
   ],
