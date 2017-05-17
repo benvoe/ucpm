@@ -22,9 +22,21 @@
             <ion-label floating>Ort</ion-label>
             <ion-input type="text"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item class="mobile">
             <ion-label>Datum und Zeit</ion-label>
             <ion-datetime displayFormat="DD MMM YYYY, HH:mm" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item class="desktop">
+            <label for="gebdat">
+                Datum
+                <input type="date" style="float:right;">
+            </label>
+        </ion-item>
+        <ion-item class="desktop">
+            <label>
+                Zeit
+                <input type="time" style="float:right;">
+            </label>
         </ion-item>
         <ion-item>
             <button text-center ion-item>
