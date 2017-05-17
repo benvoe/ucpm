@@ -12,7 +12,7 @@ export class AddEventPage {
 
   }
     public event = {
-    month: '2017-05-11',
+    month: '2017-05-18T10:55',
     timeStarts: '07:43',
     timeEnds: '1990-02-20'
   }
