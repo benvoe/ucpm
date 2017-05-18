@@ -14,24 +14,17 @@
 // automatically applied to the <body> element in the app.
 @media screen and (min-width: 720px) {
     .scroll-content {
-        padding: 5% 10% !important;
+        padding: 2% !important;
     }
     .card-md {
-        margin: 1.5% 10px;
-        //box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.14), 0 5px 10px -3px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-        padding: 1%;
-        //height: 100%;
-    }
-    .button-col {
-        //position: absolute;
-        vertical-align: bottom;
+        margin: 1.5% 5px;
     }
     .img-container {
         height: 160px;
         overflow: hidden;
     }
     .img-container img {
-        margin-top: -10%;
+        height: 100%;
     }
 }
 

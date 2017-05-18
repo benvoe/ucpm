@@ -3,3 +3,24 @@ page-home {}
 .countdown {
     float: right;
 }
+
+.news ion-list {
+    margin-top: 20px;
+}
+
+.news ion-list ion-item,
+.news ion-list ion-item.item-block:first-child,
+.news ion-list ion-item.item-block:last-child {
+    border: 1px solid #EEEEEE;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #F5F5F5;
+}
+
+.news ion-list ion-item:hover {
+    cursor: grab;
+}
+
+.news ion-list ion-item.item-ios.item-block .item-inner {
+    border-bottom: none;
+}

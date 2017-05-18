@@ -31,6 +31,28 @@ export class EventPage {
     this.FilmabendInfo = FilmabendDetailPage;
     this.SpaziergangInfo = SpaziergangDetailPage;
     this.SkiInfo = SkiDetailPage;
+    this.navCtrl = navCtrl;
+    console.log(this.navCtrl);
+    console.log("hier kommt timer");
+    this.timeout();
+  }
+
+  timeout(){
+    var that = this;
+    var timeout = (Math.floor(Math.random() * 10) + 1)*1000;
+    
+    console.log(timeout);
+      setTimeout(function () {
+          let myContainer = <HTMLElement> document.querySelector("#notification_bar");
+          var zeitstempel = new Date().toLocaleTimeString();
+          
+          var notification = "<ion-item class='item item-block item-ios'> <ion-avatar item-left> <img src='img/avatar.png'> </ion-avatar> <div class='item-inner'> <div class='input-wrapper'> <ion-label class='label label-ios'> <h2>" + zeitstempel + "</h2> <h3>Don't Know What To Do!</h3> <p>I've had a pretty messed up day. If we just...</p> </ion-label> </div> </div> </ion-item>"
+
+          myContainer.innerHTML = notification + myContainer.innerHTML;
+          console.log('Test');
+
+          that.timeout();
+      }, timeout);
   }
 
   _clickMich(){}
@@ -39,6 +61,9 @@ export class EventPage {
     console.log("clickMich gedrückt ...")
     let evnt1: EventData = new EventData(this.storage);
     let evnt2: EventData = new EventData(this.storage);
+    
+
+    
 
     let evntlist: EventList = new EventList(this.storage);
     evntlist.testStorage(55);
@@ -48,6 +73,9 @@ export class EventPage {
       console.log("Hier ist Vario: ", vario);
     })
 
+    
+    
+    
     evnt1.setTitle( "Mein viertes Event" );
     evnt1.setDescription( "Ich habe ein Event erstellt." );
     evnt1.setAttendances( 444 );
