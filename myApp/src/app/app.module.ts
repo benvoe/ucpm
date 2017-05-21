@@ -16,6 +16,7 @@ import { SpaziergangDetailPage } from '../pages/otherevents/spaziergang';
 // Ende Detailseiten
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
+import { HighscorePage } from '../pages/highscore/highscore';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -35,6 +36,7 @@ import { IonicStorageModule } from '@ionic/storage';
     SpaziergangDetailPage,
     SkiDetailPage,
     ProfilePage,
+    HighscorePage,
     TabsPage
   ],
   imports: [
@@ -55,6 +57,7 @@ import { IonicStorageModule } from '@ionic/storage';
     SpaziergangDetailPage,
     SkiDetailPage,
     ProfilePage,
+    HighscorePage,
     TabsPage
   ],
   providers: [
