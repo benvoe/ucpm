@@ -49,8 +49,11 @@ export class EventPage {
           var notification = "<ion-item class='item item-block item-ios'> <ion-avatar item-left> <img src='img/avatar.png'> </ion-avatar> <div class='item-inner'> <div class='input-wrapper'> <ion-label class='label label-ios'> <h2>" + zeitstempel + "</h2> <h3>Don't Know What To Do!</h3> <p>I've had a pretty messed up day. If we just...</p> </ion-label> </div> </div> </ion-item>"
 
           myContainer.innerHTML = notification + myContainer.innerHTML;
-          console.log('Test');
-
+          
+          if(myContainer.childElementCount > 10 ){
+            myContainer.removeChild(myContainer.lastChild);
+          }
+          
           that.timeout();
       }, timeout);
   }
