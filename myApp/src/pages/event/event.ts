@@ -46,7 +46,17 @@ export class EventPage {
           let myContainer = <HTMLElement> document.querySelector("#notification_bar");
           var zeitstempel = new Date().toLocaleTimeString();
           
-          var notification = "<ion-item class='item item-block item-ios'> <ion-avatar item-left> <img src='img/avatar.png'> </ion-avatar> <div class='item-inner'> <div class='input-wrapper'> <ion-label class='label label-ios'> <h2>" + zeitstempel + "</h2> <h3>Don't Know What To Do!</h3> <p>I've had a pretty messed up day. If we just...</p> </ion-label> </div> </div> </ion-item>"
+		var messages = ['hat sich für Joggen am Donnerstag angemeldet.', 'hat das Event Ski fahren erstellt.', 
+					'hat sich vom Filmabend in Berlin abgemeldet.', 'hat ihr Profil aktualisiert.', 'hat 10 Highscore-Punkte verdient.', 
+					'hat 30 Highscore-Punkte verdient.', 'hat das Event Ski fahren bearbeitet', 'hat einen Kommentar zu Spaziergang bei Sonnenuntergang verfasst.']; 
+		
+		var names = ['Anna Peters', 'Hans Hänse', 'Frank Schröder', 'Lea Behrens', 'Sonja Baum', 'Horst Schlegel', 'Robert Peters', 
+				'Max Bauer', 'Wayne Schlegel', 'Kevin Mayer', 'Dave Hartmann', 'Ruth Schlegel','Eckhard Schiffmann', 'Kay Roberts', 'Tim Müller', 'Mara Likowski'];
+				
+		var randMsg = messages[Math.floor(Math.random() * messages.length)];
+		var randName = names[Math.floor(Math.random() * names.length)];
+		
+          var notification = "<ion-item class='item item-block item-ios'> <ion-avatar item-left> <img src='img/avatar.png'> </ion-avatar> <div class='item-inner'> <div class='input-wrapper'> <ion-label class='label label-ios'> <h2>" + zeitstempel + "</h2> <h3>" + randName + "</h3> <p>" + randMsg + "</p> </ion-label> </div> </div> </ion-item>"
 
           myContainer.innerHTML = notification + myContainer.innerHTML;
           
