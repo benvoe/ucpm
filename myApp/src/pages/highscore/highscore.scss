@@ -15,3 +15,10 @@ h2{font-size: 20px;}
 .score {
     float: right;
 }
+
+@media screen and (min-width: 768px) {
+	.highscorewidth {
+        width: 80%;
+		margin: 2% auto;
+    }
+}
