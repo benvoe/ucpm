@@ -3,45 +3,84 @@
         <ion-title>Event hinzufügen</ion-title>
     </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-    <ion-list>
-        <ion-item>
-            <ion-label floating>Titel</ion-label>
-            <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Beschreibung</ion-label>
-            <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Autor</ion-label>
-            <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Ort</ion-label>
-            <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item class="mobile">
-            <ion-label>Datum und Zeit</ion-label>
-            <ion-datetime displayFormat="DD MMM YYYY, HH:mm" [(ngModel)]="event.month"></ion-datetime>
-        </ion-item>
-        <ion-item class="desktop">
-            <label for="gebdat">
-                Datum
-                <input type="date" style="float:right;">
-            </label>
-        </ion-item>
-        <ion-item class="desktop">
-            <label>
-                Zeit
-                <input type="time" style="float:right;">
-            </label>
-        </ion-item>
-        <ion-item>
-            <button text-center ion-item>
-			Event veröffentlichen
-		</button>
-        </ion-item>
-    </ion-list>
-</ion-content>
+    <div style="width:50%;margin:5% auto;">
+        <ion-grid>
+            <ion-list>
+                <!--Erste Reihe -->
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label floating>Titel</ion-label>
+                            <ion-input type="text"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label floating>Autor</ion-label>
+                            <ion-input id="test" type="text" value="Sonja Baum"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <!--Zweite Reihe -->
+                <ion-row margin-top="10px">
+                    <ion-col>
+                        <ion-item>
+                            <ion-label floating>Ort</ion-label>
+                            <ion-input type="text"></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col>
+                        <ion-item class="mobile">
+                            <ion-label>Datum und Zeit</ion-label>
+                            <ion-datetime displayFormat="DD MMM YYYY, HH:mm" [(ngModel)]="event.month"></ion-datetime>
+                        </ion-item>
+                        <ion-item class="desktop">
+                            <label for="gebdat">
+                                Datum
+                                <input type="date" style="float:right;">
+                            </label>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col>
+                        <ion-item class="desktop">
+                            <label>
+                                Zeit
+                                <input type="time" style="float:right;">
+                            </label>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <!--Dritte Reihe -->
+                <ion-row margin-top="10px">
+                    <ion-item>
+                        <ion-label floating>Beschreibung</ion-label>
+                        <ion-input type="text"></ion-input>
+                    </ion-item>
+                </ion-row>
+
+                <!--Vierte Reihe -->
+                <ion-row margin-top="10px">
+                    <ion-item>
+                        <ion-label>Event Battle <ion-icon name="ios-flash"></ion-icon></ion-label>
+                        <ion-checkbox color="dark" checked></ion-checkbox>
+                    </ion-item>
+                </ion-row>
+
+                <!--Fünfte Reihe -->
+                <ion-row margin-top="10px">
+                    <ion-item>
+                        <button text-center ion-item color="dark">
+                            Event veröffentlichen
+                        </button>
+                    </ion-item>
+                </ion-row>
+
+            </ion-list>
+        </ion-grid>
+    </div>
+</ion-content>           
