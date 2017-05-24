@@ -11,14 +11,23 @@ page-home {}
 .news ion-list ion-item,
 .news ion-list ion-item.item-block:first-child,
 .news ion-list ion-item.item-block:last-child {
-    border: 1px solid #EEEEEE;
-    border-radius: 10px;
+    border: 1px solid #EFEFEF;
+    border-radius: 5px;
     margin-bottom: 10px;
     background-color: #F5F5F5;
+	opacity: 0.6;
+	transition: all 1s;
+}
+
+.news ion-list ion-item:hover,
+.news ion-list ion-item.item-block:first-child:hover,
+.news ion-list ion-item.item-block:last-child:hover {
+	opacity: 1;
+	border: 1px solid #CECECE;
 }
 
 .news ion-list ion-item:hover {
-    cursor: grab;
+    cursor: pointer;
 }
 
 .news ion-list ion-item.item-ios.item-block .item-inner {
