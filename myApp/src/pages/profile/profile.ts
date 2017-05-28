@@ -38,7 +38,7 @@ export class ProfilePage {
   showToast(position: string) {
       let toast = this.toastCtrl.create({
           message: 'Aenderungen wurden gespeichert.',
-          duration: 3000,
+          duration: 2000,
           position: position
       });
      
