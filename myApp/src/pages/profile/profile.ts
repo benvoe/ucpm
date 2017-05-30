@@ -34,10 +34,10 @@ export class ProfilePage {
   //private myName = String(this.storage.get('name'));
 
 
- //Speicherbestätigung
+ //Speicherbest?igung
   showToast(position: string) {
       let toast = this.toastCtrl.create({
-          message: 'Aenderungen wurden gespeichert.',
+          message: "Ã„nderungen wurden gespeichert.",
           duration: 2000,
           position: position
       });

@@ -70,7 +70,7 @@ export class EventData {
         },3000);
     }
 
-    private save(){
+    save(){
         let event_list = new EventList(this.storage);
 
         event_list.setElement(this._id, this);
