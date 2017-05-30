@@ -24,7 +24,22 @@ export class EventPage {
   FilmabendInfo: any;
   SpaziergangInfo: any;
   SkiInfo: any;
-
+  
+  JoggenNimmtTeil: boolean;
+  FilmabendNimmtTeil: boolean;
+  SpaziergangNimmtTeil: boolean;
+  SkiNimmtTeil: boolean;
+  
+  JoggenBeitretenText: string;
+  FilmabendBeitretenText: string;
+  SpaziergangBeitretenText: string;
+  SkiBeitretenText: string;
+  
+  JoggenParams: Object;
+  FilmabendParams: Object;
+  SpaziergangParams: Object;
+  SkiParams: Object;
+  
   constructor(public navCtrl: NavController, public storage: Storage) {
     this.NewEvent = AddEventPage;
     this.EventInfo = EventDetailPage;
@@ -35,6 +50,21 @@ export class EventPage {
     console.log(this.navCtrl);
     console.log("hier kommt timer");
     this.timeout();
+	
+	this.JoggenNimmtTeil = false;
+	this.FilmabendNimmtTeil = false;
+	this.SpaziergangNimmtTeil = false;
+	this.SkiNimmtTeil = false;
+	
+	this.JoggenBeitretenText = "+ Beitreten";
+	this.FilmabendBeitretenText = "+ Beitreten";
+	this.SpaziergangBeitretenText = "+ Beitreten";
+	this.SkiBeitretenText = "+ Beitreten";
+	
+	this.JoggenParams = {teilnahme: 0};
+	this.FilmabendParams = {teilnahme: 0};
+	this.SpaziergangParams = {teilnahme: 0};
+	this.SkiParams = {teilnahme: 0};
   }
 
   timeout(){
@@ -70,7 +100,65 @@ export class EventPage {
       }, timeout);
   }
 
-  _clickMich(){}
+  JoggenBeitretenClick() {
+	if (this.JoggenNimmtTeil == false)
+	{
+		this.JoggenNimmtTeil = true;
+		this.JoggenBeitretenText = '- Abmelden';
+		this.JoggenParams = {teilnahme: 1};
+	}
+	else
+	{
+		this.JoggenNimmtTeil = false;
+		this.JoggenBeitretenText = '+ Beitreten';
+		this.JoggenParams = {teilnahme: 0};
+	}
+  }
+  
+  FilmabendBeitretenClick() {
+	if (this.FilmabendNimmtTeil == false)
+	{
+		this.FilmabendNimmtTeil = true;
+		this.FilmabendBeitretenText = '- Abmelden';
+		this.FilmabendParams = {teilnahme: 1};
+	}
+	else
+	{
+		this.FilmabendNimmtTeil = false;
+		this.FilmabendBeitretenText = '+ Beitreten';
+		this.FilmabendParams = {teilnahme: 0};
+	}
+  }
+  
+  SpaziergangBeitretenClick() {
+	if (this.SpaziergangNimmtTeil == false)
+	{
+		this.SpaziergangNimmtTeil = true;
+		this.SpaziergangBeitretenText = '- Abmelden';
+		this.SpaziergangParams = {teilnahme: 1};
+	}
+	else
+	{
+		this.SpaziergangNimmtTeil = false;
+		this.SpaziergangBeitretenText = '+ Beitreten';
+		this.SpaziergangParams = {teilnahme: 0};
+	}
+  }
+  
+  SkiBeitretenClick() {
+	if (this.SkiNimmtTeil == false)
+	{
+		this.SkiNimmtTeil = true;
+		this.SkiBeitretenText = '- Abmelden';
+		this.SkiParams = {teilnahme: 1};
+	}
+	else
+	{
+		this.SkiNimmtTeil = false;
+		this.SkiBeitretenText = '+ Beitreten';
+		this.SkiParams = {teilnahme: 0};
+	}
+  }  
 
   clickMich(){
     console.log("clickMich gedrückt ...")

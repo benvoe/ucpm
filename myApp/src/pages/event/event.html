@@ -122,13 +122,12 @@
 								</ion-card-content>
 								<ion-row text-center class="button-col">
 									<ion-col>
-										<button ion-button clear small color="danger" (click)="_clickMich()" icon-left>
-											<ion-icon name='add'></ion-icon>
-											Beitreten
+										<button ion-button clear small color="danger" (click)="JoggenBeitretenClick()" icon-left>
+											{{JoggenBeitretenText}}
 										</button>
 									</ion-col>
 									<ion-col text-center>
-										<button ion-button clear small color="danger" [navPush]="EventInfo" icon-left>
+										<button ion-button clear small color="danger" [navPush]="EventInfo" [navParams]="JoggenParams" icon-left>
 											<ion-icon name='information-circle'></ion-icon>
 											Details
 										</button>
@@ -165,13 +164,12 @@
 								</ion-card-content>
 								<ion-row text-center class="button-col">
 									<ion-col>
-										<button ion-button clear small color="danger" (click)="_clickMich()" icon-left>
-											<ion-icon name='add'></ion-icon>
-											Beitreten
+										<button ion-button clear small color="danger" (click)="FilmabendBeitretenClick()" icon-left>
+											{{FilmabendBeitretenText}}
 										</button>
 									</ion-col>
 									<ion-col text-center>
-										<button ion-button clear small color="danger" [navPush]="FilmabendInfo" icon-left>
+										<button ion-button clear small color="danger" [navPush]="FilmabendInfo" [navParams]="FilmabendParams" icon-left>
 											<ion-icon name='information-circle'></ion-icon>
 											Details
 										</button>
@@ -208,13 +206,12 @@
 								</ion-card-content>
 								<ion-row text-center class="button-col">
 									<ion-col>
-										<button ion-button clear small color="danger" (click)="_clickMich()" icon-left>
-											<ion-icon name='add'></ion-icon>
-											Beitreten
+										<button ion-button clear small color="danger" (click)="SpaziergangBeitretenClick()" icon-left>
+											{{SpaziergangBeitretenText}}
 										</button>
 									</ion-col>
 									<ion-col text-center>
-										<button ion-button clear small color="danger" [navPush]="SpaziergangInfo" icon-left>
+										<button ion-button clear small color="danger" [navPush]="SpaziergangInfo" [navParams]="SpaziergangParams" icon-left>
 											<ion-icon name='information-circle'></ion-icon>
 											Details
 										</button>
@@ -251,13 +248,12 @@
 								</ion-card-content>
 								<ion-row text-center class="button-col">
 									<ion-col>
-										<button ion-button clear small color="danger" (click)="_clickMich()" icon-left>
-											<ion-icon name='add'></ion-icon>
-											Beitreten
+										<button ion-button clear small color="danger" (click)="SkiBeitretenClick()" icon-left>
+											{{SkiBeitretenText}}
 										</button>
 									</ion-col>
 									<ion-col text-center>
-										<button ion-button clear small color="danger" [navPush]="SkiInfo" icon-left>
+										<button ion-button clear small color="danger" [navPush]="SkiInfo" [navParams]="SkiParams" icon-left>
 											<ion-icon name='information-circle'></ion-icon>
 											Details
 										</button>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-event',
@@ -12,10 +12,19 @@ export class EventDetailPage {
   nimmtTeil: boolean;
   beitreten: string;
   
-  constructor(public navCtrl: NavController) {
-	this.teilnehmer = 0;
-	this.nimmtTeil = false;
-	this.beitreten = 'Beitreten';
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+	if (this.navParams.get('teilnahme') == 0)
+	{
+		this.teilnehmer = 0;
+		this.nimmtTeil = false;
+		this.beitreten = '+ Beitreten';
+	}
+	else
+	{
+		this.teilnehmer = 1;
+		this.nimmtTeil = true;
+		this.beitreten = '- Abmelden';
+	}
   }
   
   ButtonBeitreten_Click(){
@@ -23,13 +32,13 @@ export class EventDetailPage {
 	{
 		this.teilnehmer += 1;
 		this.nimmtTeil = true;
-		this.beitreten = 'Abmelden';
+		this.beitreten = '- Abmelden';
 	}
 	else
 	{
 		this.teilnehmer -= 1;
 		this.nimmtTeil = false;
-		this.beitreten = 'Beitreten';
+		this.beitreten = '+ Beitreten';
 		}
   }
   
