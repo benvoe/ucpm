@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-event',
@@ -12,7 +13,7 @@ export class EventDetailPage {
   nimmtTeil: boolean;
   beitreten: string;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
 	if (this.navParams.get('teilnahme') == 0)
 	{
 		this.teilnehmer = 0;
@@ -40,6 +41,18 @@ export class EventDetailPage {
 		this.nimmtTeil = false;
 		this.beitreten = '+ Beitreten';
 		}
+  }
+
+  //Bestätigung Kommentar
+  showToast(position: string) {
+      let toast = this.toastCtrl.create({
+          message: "Kommentar wurde hinzugefuegt.",
+          duration: 2000,
+          position: position,
+      });
+
+      //let anordnung: string='abstand';
+      toast.present(toast);
   }
   
 }

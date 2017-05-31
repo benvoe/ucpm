@@ -34,7 +34,7 @@ export class ProfilePage {
   //private myName = String(this.storage.get('name'));
 
 
- //Speicherbest?igung
+ //Speicherbestätigung
   showToast(position: string) {
       let toast = this.toastCtrl.create({
           message: "Änderungen wurden gespeichert.",
@@ -42,7 +42,6 @@ export class ProfilePage {
           position: position,
       });
 
-      //let anordnung: string='abstand';
       toast.present(toast);
   }
 
