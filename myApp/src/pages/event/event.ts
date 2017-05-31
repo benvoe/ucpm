@@ -49,7 +49,7 @@ export class EventPage {
     this.navCtrl = navCtrl;
     console.log(this.navCtrl);
     console.log("hier kommt timer");
-    this.timeout();
+    this.timer();
 	
 	this.JoggenNimmtTeil = false;
 	this.FilmabendNimmtTeil = false;
@@ -67,39 +67,35 @@ export class EventPage {
 	this.SkiParams = {teilnahme: 0};
   }
 
-  timeout(){
-    var that = this;
+  timer() {
     var timeout = (Math.floor(Math.random() * 10) + 1)*1000;
-    
-    console.log(timeout);
-      setTimeout(function () {
-          let myContainer = <HTMLElement> document.querySelector("#notification_bar");
-          var zeitstempel = new Date().toLocaleTimeString();
-          
-		var messages = ['hat sich für Joggen am Donnerstag angemeldet.', 'hat das Event Ski fahren erstellt.', 
+    setInterval(this.insertNotification, timeout);
+  }
+  
+  insertNotification() {
+	let myContainer = <HTMLElement> document.querySelector("#notification_bar");
+	var zeitstempel = new Date().toLocaleTimeString();
+			
+	var messages = ['hat sich für Joggen am Donnerstag angemeldet.', 'hat das Event Ski fahren erstellt.', 
 					'hat sich vom Filmabend in Berlin abgemeldet.', 'hat das eigene Profil aktualisiert.', 'hat 10 Highscore-Punkte verdient.', 
 					'hat 30 Highscore-Punkte verdient.', 'hat das Event Ski fahren bearbeitet.', 'hat einen Kommentar zu Spaziergang bei Sonnenuntergang verfasst.']; 
 		
-		var names = ['Anna Peters', 'Hans Hänse', 'Frank Schröder', 'Lea Behrens', 'Sonja Baum', 'Horst Schlegel', 'Robert Peters', 
+	var names = ['Anna Peters', 'Hans Hänse', 'Frank Schröder', 'Lea Behrens', 'Sonja Baum', 'Horst Schlegel', 'Robert Peters', 
 				'Max Bauer', 'Wayne Schlegel', 'Kevin Mayer', 'Dave Hartmann', 'Ruth Schlegel','Eckhard Schiffmann', 'Kay Roberts',
 				'Tim Müller', 'Mara Litkowski', 'Christine Korsten', "Thomas Wagels", "Tatjana Würth"];
-				
-		var randMsg = messages[Math.floor(Math.random() * messages.length)];
-		var randName = names[Math.floor(Math.random() * names.length)];
-		var fileName = "img/notif_avatars/" + randName.replace(" ", "%20") + ".jpg";
-		
-          var notification = "<ion-item class='item item-block item-ios'> <ion-avatar item-left> <img src='" + fileName + "'> </ion-avatar> <div class='item-inner'> <div class='input-wrapper'> <ion-label class='label label-ios'> <h2>" + zeitstempel + "</h2> <h3>" + randName + "</h3> <p>" + randMsg + "</p> </ion-label> </div> </div> </ion-item>"
+	var randMsg = messages[Math.floor(Math.random() * messages.length)];
+	var randName = names[Math.floor(Math.random() * names.length)];
+	var fileName = "img/notif_avatars/" + randName.replace(" ", "%20") + ".jpg";
 
-          myContainer.innerHTML = notification + myContainer.innerHTML;
-          
-          if(myContainer.childElementCount > 10 ){
-            myContainer.removeChild(myContainer.lastChild);
-          }
-          
-          that.timeout();
-      }, timeout);
+	var notification = "<ion-item class='item item-block item-ios'> <ion-avatar item-left> <img src='" + fileName + "'> </ion-avatar> <div class='item-inner'> <div class='input-wrapper'> <ion-label class='label label-ios'> <h2>" + zeitstempel + "</h2> <h3>" + randName + "</h3> <p>" + randMsg + "</p> </ion-label> </div> </div> </ion-item>"
+
+	myContainer.innerHTML = notification + myContainer.innerHTML;
+	  
+	if(myContainer.childElementCount > 10 ){
+		myContainer.removeChild(myContainer.lastChild);
+	}
   }
-
+  
   JoggenBeitretenClick() {
 	if (this.JoggenNimmtTeil == false)
 	{
