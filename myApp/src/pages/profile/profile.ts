@@ -39,9 +39,10 @@ export class ProfilePage {
       let toast = this.toastCtrl.create({
           message: "Änderungen wurden gespeichert.",
           duration: 2000,
-          position: position
+          position: position,
       });
-     
+
+      //let anordnung: string='abstand';
       toast.present(toast);
   }
 
