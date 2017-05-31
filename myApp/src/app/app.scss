@@ -35,6 +35,15 @@
     padding: 0;
 }
 
+ion-content{
+    background-image: url('../../img/background4.png');
+	//background-size: cover;
+}
+
+.countdown, .battle {
+    float: right;
+}
+
 .logo {
   padding-left: 20px;
   width: 200px;
@@ -42,7 +51,6 @@
   animation: bounceIn 5s;
   transform: rotate(0deg) scale(1) translateZ(0);
   transition: all 0.4s cubic-bezier(.8,1.8,.75,.75);
-  cursor: pointer;
 }
 
 .logo:hover {

@@ -1,6 +1,6 @@
 page-home {}
 
-.countdown {
+.countdown, .battle, .countdownnext {
     float: right;
 }
 
@@ -15,15 +15,13 @@ page-home {}
     border-radius: 5px;
     margin-bottom: 10px;
     background-color: #F5F5F5;
-	opacity: 1;
 	transition: all 0.7s;
 }
 
 .news ion-list ion-item:hover,
 .news ion-list ion-item.item-block:first-child:hover,
 .news ion-list ion-item.item-block:last-child:hover {
-	opacity: 1;
-	border: 1px solid #CECECE;
+	border-color: #31b3a0;
 }
 
 .news ion-list ion-item:hover {
@@ -41,9 +39,3 @@ page-home {}
 		padding-right: 5%;
     }
 }
-
-
-.wayne-color-dark{color:#0d7969;}
-.wayne-color-light{color:#31b3a0;}
-.wayne-color-transparent{background-color:rgba(0, 0, 0, 0.00)}
-.badge-font{font-size:14pt;}
