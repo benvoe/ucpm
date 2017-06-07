@@ -1,6 +1,8 @@
 page-home {}
 
-.countdown, .battle, .countdownnext {
+.countdown,
+.battle,
+.countdownnext {
     float: right;
 }
 
@@ -15,13 +17,13 @@ page-home {}
     border-radius: 5px;
     margin-bottom: 10px;
     background-color: #F5F5F5;
-	transition: all 0.7s;
+    transition: all 0.7s;
 }
 
 .news ion-list ion-item:hover,
 .news ion-list ion-item.item-block:first-child:hover,
 .news ion-list ion-item.item-block:last-child:hover {
-	border-color: #31b3a0;
+    border-color: #31b3a0;
 }
 
 .news ion-list ion-item:hover {
@@ -33,9 +35,13 @@ page-home {}
 }
 
 @media screen and (min-width: 768px) {
-	.eventcontent {
-		margin: 0% auto;
-		padding-left: 5%;
-		padding-right: 5%;
+    .eventcontent {
+        margin: 0% auto;
+        padding-left: 5%;
+        padding-right: 5%;
     }
+}
+
+.eventcontent h2 {
+    text-align: center;
 }
