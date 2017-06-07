@@ -1,26 +1,38 @@
 page-home {}
 
 .list-avatar-page {
-  ion-note {
-    font-size: 12px;
-    align-self: flex-start;
-    margin-top: 14px;
-  }
+    ion-note {
+        font-size: 12px;
+        align-self: flex-start;
+        margin-top: 14px;
+    }
 }
 
-h1{font-size: 30px;}
-h2{font-size: 20px;}
+h1 {
+    font-size: 30px;
+}
 
+h2 {
+    font-size: 20px;
+}
 
 .score {
     float: right;
 }
 
 @media screen and (min-width: 768px) {
-	.highscorewidth {
+    .highscorewidth {
         width: 80%;
-		margin: 2% auto;
+        margin: 2% auto;
     }
 }
 
-.badge-font{font-size:16pt;}
+.badge-font {
+    font-size: 16pt;
+}
+
+.city-logo {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+}
