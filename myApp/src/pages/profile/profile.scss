@@ -11,11 +11,21 @@
 }
 
 @media screen and (min-width: 768px) {
-	.profilewidth {
+    .profilewidth {
         width: 50%;
-		margin: 5% auto;
+        margin: 2% auto;
     }
 }
 
-.wayne-color-darke{background-color:#0d7969;}
-.wayne-color-light{background-color:#31b3a0;}
+.profilewidth h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.wayne-color-darke {
+    background-color: #0d7969;
+}
+
+.wayne-color-light {
+    background-color: #31b3a0;
+}
