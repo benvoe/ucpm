@@ -5,112 +5,121 @@
 </ion-header>
 
 <ion-content padding>
-    <div class="detailwidth">
-        <ion-card>
-			<div class="img-container">
-				<img src="img/sunset.jpg" />
-			</div>
-            <ion-card-content>
-                <ion-card-title>
-                    Spaziergang bei Sonnenuntergang
-                    <ion-badge class="countdown" color="secondary" item-right>13 Tage</ion-badge>
-					<ion-badge color="dark" class="battle">Battle</ion-badge>
-                </ion-card-title>
-                <p>
-                    <b>Donnerstag, 11.05.2017 16 Uhr</b>
-                </p>
-                <br />
-                <p>
-                   Ein entspannter Spaziergang bei Sonnuntergang ist doch für jeden etwas!
-                </p>
-                <p>
-                    Einfach mal den Tag gemütlich und mit netten Kollegen ausklingen lassen.
-                </p>
-                <p>
-                    Wer möchte, kann sich gerne Getränke mitnehmen, falls der Abend etwas länger wird.
-                </p>
-                <br />
-                <p>
-                    <b>Köln, Aachener Weiher</b>
-                </p>
-                <p>
-                    Erstellt von
-                    <ion-badge color="secondary" item-right>Karla Kolumna</ion-badge>
-                </p>
-            </ion-card-content>
-            <ion-row no-padding>
-                <ion-col>
-                    <button ion-button clear small color="danger" icon-left (click)="ButtonBeitreten_Click()">
-                        {{beitreten}}
-                    </button>
-                </ion-col>
-                <ion-col text-right>
-                    <button ion-button clear small color="danger" icon-left>
-                        <ion-icon name='share-alt'></ion-icon>
-                        Einladen
-                    </button>
-                </ion-col>
-            </ion-row>
-        </ion-card>
-        <ion-card>
-            <ion-card-content>
-                <ion-card-title>
-                    Teilnehmer
-                </ion-card-title>
-                <ion-label>Bisher {{teilnehmer}} Teilnehmer</ion-label>
-            </ion-card-content>
-        </ion-card>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-lg-2>
+            </ion-col>
+            <ion-col col-lg-8>
+                <ion-card>
+                    <div>
+                        <div class="img-container">
+                        <img src="img/sunset.jpg" />
+                        </div>
+                        <img class="badgeImage" src="img/battle.png" />
+                            </div>
+                    <ion-card-content>
+                        <ion-card-title>
+                            Spaziergang bei Sonnenuntergang
+                            <ion-badge class="countdown" color="secondary" item-right>13 Tage</ion-badge>
+                        </ion-card-title>
+                        <p>
+                            <b>Donnerstag, 11.05.2017 16 Uhr</b>
+                        </p>
+                        <br />
+                        <p>
+                        Ein entspannter Spaziergang bei Sonnuntergang ist doch für jeden etwas!
+                        </p>
+                        <p>
+                            Einfach mal den Tag gemütlich und mit netten Kollegen ausklingen lassen.
+                        </p>
+                        <p>
+                            Wer möchte, kann sich gerne Getränke mitnehmen, falls der Abend etwas länger wird.
+                        </p>
+                        <br />
+                        <p>
+                            <b>Köln, Aachener Weiher</b>
+                        </p>
+                        <p>
+                            Erstellt von
+                            <ion-badge color="secondary" item-right>Karla Kolumna</ion-badge>
+                        </p>
+                    </ion-card-content>
+                    <ion-row no-padding>
+                        <ion-col>
+                            <button ion-button clear small color="danger" icon-left (click)="ButtonBeitreten_Click()">
+                                {{beitreten}}
+                            </button>
+                        </ion-col>
+                        <ion-col text-right>
+                            <button ion-button clear small color="danger" icon-left>
+                                <ion-icon name='share-alt'></ion-icon>
+                                Einladen
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+                <ion-card>
+                    <ion-card-content>
+                        <ion-card-title>
+                            Teilnehmer
+                        </ion-card-title>
+                        <ion-label>Bisher {{teilnehmer}} Teilnehmer</ion-label>
+                    </ion-card-content>
+                </ion-card>
 
-        <ion-card>
-            <ion-card-content>
-                <ion-card-title>
-                    Kommentare
-                </ion-card-title>
-				<ion-item>
-					<ion-row>
-						<ion-col col-auto>
-							<ion-avatar item-start>
-								<img src="../../img/notif_avatars/Hans Hänse.jpg">
-							</ion-avatar>
-						</ion-col>
-						<ion-col text-left>
-							Hans Hänse
-						</ion-col>
-					</ion-row>
-					<p>Coole Sache! Sind immer schöne Abende.</p>
-				</ion-item>
-				<ion-item>
-					<ion-row>
-						<ion-col col-auto>
-							<ion-avatar item-start>
-								<img src="../../img/notif_avatars/Sonja Baum.jpg">
-							</ion-avatar>
-						</ion-col>
-						<ion-col text-left>
-							Sonja Baum
-						</ion-col>
-					</ion-row>
-					<p>Nächstes Mal bin ich dabei!</p>
-				</ion-item>
-            </ion-card-content>
-			<ion-item-divider>
-				Verfasse einen eigenen Kommentar:
-			</ion-item-divider>
+                <ion-card>
+                    <ion-card-content>
+                        <ion-card-title>
+                            Kommentare
+                        </ion-card-title>
+                        <ion-item>
+                            <ion-row>
+                                <ion-col col-auto>
+                                    <ion-avatar item-start>
+                                        <img src="../../img/notif_avatars/Hans Hänse.jpg">
+                                    </ion-avatar>
+                                </ion-col>
+                                <ion-col text-left>
+                                    Hans Hänse
+                                </ion-col>
+                            </ion-row>
+                            <p>Coole Sache! Sind immer schöne Abende.</p>
+                        </ion-item>
+                        <ion-item>
+                            <ion-row>
+                                <ion-col col-auto>
+                                    <ion-avatar item-start>
+                                        <img src="../../img/notif_avatars/Sonja Baum.jpg">
+                                    </ion-avatar>
+                                </ion-col>
+                                <ion-col text-left>
+                                    Sonja Baum
+                                </ion-col>
+                            </ion-row>
+                            <p>Nächstes Mal bin ich dabei!</p>
+                        </ion-item>
+                    </ion-card-content>
+                    <ion-item-divider>
+                        Verfasse einen eigenen Kommentar:
+                    </ion-item-divider>
 
-            <ion-item>
-                <ion-label floating>Kommentartext</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-			
-            <ion-row no-padding>
-                <ion-col>
-                    <button ion-button clear small color="danger" icon-left>
-                        <ion-icon name='add'></ion-icon>
-                        Kommentar hinzufügen
-                    </button>
-                </ion-col>
-            </ion-row>
-        </ion-card>
-
-    </div>
+                    <ion-item>
+                        <ion-label floating>Kommentartext</ion-label>
+                        <ion-input type="text"></ion-input>
+                    </ion-item>
+                    
+                    <ion-row no-padding>
+                        <ion-col>
+                            <button ion-button clear small color="danger" icon-left>
+                                <ion-icon name='add'></ion-icon>
+                                Kommentar hinzufügen
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </ion-col>
+            <ion-col col-lg-2>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
