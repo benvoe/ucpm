@@ -45,3 +45,20 @@ page-home {}
 .eventcontent h2 {
     text-align: center;
 }
+
+ion-card div.battle {
+    height: 50px;
+    width: 150px;
+    background-color: red;
+    position: absolute;
+    -moz-transform: rotate(45deg);
+    /* Firefox 3.6 Firefox 4 */
+    -webkit-transform: rotate(45deg);
+    /* Safari */
+    -o-transform: rotate(45deg);
+    /* Opera */
+    -ms-transform: rotate(45deg);
+    /* IE9 */
+    transform: rotate(45deg);
+    /* W3C */
+}
