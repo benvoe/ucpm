@@ -12,12 +12,17 @@
 
 @media screen and (min-width: 768px) {
     .profilewidth {
-        width: 50%;
+        width: 75%;
         margin: 2% auto;
     }
 }
 
 .profilewidth h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profilewidth h1 {
     text-align: center;
     margin-bottom: 40px;
 }
