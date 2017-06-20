@@ -29,11 +29,13 @@ export class EventPage {
   FilmabendNimmtTeil: boolean;
   SpaziergangNimmtTeil: boolean;
   SkiNimmtTeil: boolean;
+  NewsVisible: boolean;
   
   JoggenBeitretenText: string;
   FilmabendBeitretenText: string;
   SpaziergangBeitretenText: string;
   SkiBeitretenText: string;
+  NewsVisibleText: string;
   
   JoggenParams: Object;
   FilmabendParams: Object;
@@ -55,11 +57,13 @@ export class EventPage {
 	this.FilmabendNimmtTeil = false;
 	this.SpaziergangNimmtTeil = false;
 	this.SkiNimmtTeil = false;
+	this.NewsVisible = true;
 	
 	this.JoggenBeitretenText = "+ Beitreten";
 	this.FilmabendBeitretenText = "+ Beitreten";
 	this.SpaziergangBeitretenText = "+ Beitreten";
 	this.SkiBeitretenText = "+ Beitreten";
+	this.NewsVisibleText = "» ausblenden"
 	
 	this.JoggenParams = {teilnahme: 0};
 	this.FilmabendParams = {teilnahme: 0};
@@ -68,13 +72,13 @@ export class EventPage {
   }
 
   timer() {
-    var timeout = (Math.floor(Math.random() * 10) + 1)*1000;
+    var timeout = (Math.floor(Math.random() * 15) + 1)*1000;
     setInterval(this.insertNotification, timeout);
   }
   
   insertNotification() {
 	let myContainer = <HTMLElement> document.querySelector("#notification_bar");
-	var zeitstempel = new Date().toLocaleTimeString();
+	var zeitstempel = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
 			
 	var messages = ['hat sich für Joggen am Donnerstag angemeldet.', 'hat das Event Ski fahren erstellt.', 
 					'hat sich vom Filmabend in Berlin abgemeldet.', 'hat das eigene Profil aktualisiert.', 'hat 10 Highscore-Punkte verdient.', 
@@ -87,7 +91,7 @@ export class EventPage {
 	var randName = names[Math.floor(Math.random() * names.length)];
 	var fileName = "img/notif_avatars/" + randName.replace(" ", "%20") + ".jpg";
 
-	var notification = "<ion-item class='item item-block item-ios'> <ion-avatar item-left> <img src='" + fileName + "'> </ion-avatar> <div class='item-inner'> <div class='input-wrapper'> <ion-label class='label label-ios'> <h2>" + zeitstempel + "</h2> <h3>" + randName + "</h3> <p>" + randMsg + "</p> </ion-label> </div> </div> </ion-item>"
+	var notification = "<ion-item class='item item-block item-ios'> <ion-avatar item-left> <img src='" + fileName + "'> </ion-avatar> <div class='item-inner'> <div class='input-wrapper'> <ion-label class='label label-ios'> <h2>" + randName + "</h2> <h3>" + zeitstempel + "</h3> <p>" + randMsg + "</p> </ion-label> </div> </div> </ion-item>"
 
 	myContainer.innerHTML = notification + myContainer.innerHTML;
 	  
@@ -196,4 +200,20 @@ export class EventPage {
     console.log(evnt2.getAttendances());
   }
 
+    ToggleNewsVisibility() {
+		var x = document.getElementById('notification_bar');
+		
+		if (this.NewsVisible == false)
+		{
+			this.NewsVisible = true;
+			this.NewsVisibleText = '» ausblenden';
+			x.style.display = 'block';
+		}
+		else
+		{
+			this.NewsVisible = false;
+			this.NewsVisibleText = '« einblenden';
+			x.style.display = 'none';
+		}
+  }  
 }
