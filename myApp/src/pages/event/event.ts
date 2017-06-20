@@ -201,19 +201,21 @@ export class EventPage {
   }
 
     ToggleNewsVisibility() {
-		var x = document.getElementById('notification_bar');
+		var x = document.getElementById('news');
 		
 		if (this.NewsVisible == false)
 		{
 			this.NewsVisible = true;
 			this.NewsVisibleText = '» ausblenden';
 			x.style.display = 'block';
+			document.getElementById("content").setAttribute("col-lg-9","");
 		}
 		else
 		{
 			this.NewsVisible = false;
 			this.NewsVisibleText = '« einblenden';
 			x.style.display = 'none';
+			document.getElementById("content").removeAttribute("col-lg-9");
 		}
   }  
 }

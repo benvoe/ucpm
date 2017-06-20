@@ -54,6 +54,14 @@ page-home {}
     height: 60px;
 }
 
+button.toggle-notification {
+    position: absolute;
+    margin-left: 90%;
+    margin-top: -15px;
+    z-index: 100;
+}
+
 .news {
-	 border-left: 1px solid #31b3a0;	 
+    border-left: 1px solid #31b3a0;
+    padding-left: 35px;
 }

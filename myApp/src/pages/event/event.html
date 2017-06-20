@@ -287,16 +287,17 @@
                     </ion-row>
                 </div>
             </ion-col>
+            <button id="toggle-notification-button" class="toggle-notification" ion-button clear small color="danger" (click)="ToggleNewsVisibility()" icon-left>
+					{{NewsVisibleText}}
+			</button>
             <ion-col id="news" class="news" col-lg-3>
-				
-				<ion-row text-right> 
-					<ion-col>
-						<button ion-button clear small color="danger" (click)="ToggleNewsVisibility()" icon-left>
-							{{NewsVisibleText}}
-						</button>
-					</ion-col>
-				</ion-row>
-				
+
+                <ion-row text-right>
+                    <ion-col>
+
+                    </ion-col>
+                </ion-row>
+
                 <ion-list id="notification_bar">
                 </ion-list>
             </ion-col>
