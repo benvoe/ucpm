@@ -70,7 +70,7 @@
 <ion-content padding>
     <ion-grid>
         <ion-row>
-            <ion-col col-12 col-lg-9>
+            <ion-col id="content" col-12 col-lg-9>
                 <div class="eventcontent">
                     <h2>Events</h2>
                     <ion-row>
@@ -288,6 +288,15 @@
                 </div>
             </ion-col>
             <ion-col id="news" class="news" col-lg-3>
+				
+				<ion-row text-right> 
+					<ion-col>
+						<button ion-button clear small color="danger" (click)="ToggleNewsVisibility()" icon-left>
+							{{NewsVisibleText}}
+						</button>
+					</ion-col>
+				</ion-row>
+				
                 <ion-list id="notification_bar">
                 </ion-list>
             </ion-col>
