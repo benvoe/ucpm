@@ -72,7 +72,7 @@ export class EventPage {
   }
 
   timer() {
-    var timeout = (Math.floor(Math.random() * 15) + 1)*1000;
+    var timeout = (Math.floor(Math.random() * 25) + 1)*1000;
     setInterval(this.insertNotification, timeout);
   }
   
