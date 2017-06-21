@@ -41,7 +41,7 @@ import { IonicStorageModule } from '@ionic/storage';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp, {mode: 'ios', backButtonText: 'Zurück',tabsPlacement:'top'}), //ios, md, wp
+    IonicModule.forRoot(MyApp, {mode: 'ios', backButtonText: 'Zurück'}),//tabsPlacement:'top'}), //ios, md, wp
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
