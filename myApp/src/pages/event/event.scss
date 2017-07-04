@@ -42,6 +42,15 @@ page-home {}
     }
 }
 
+@media screen and (max-width: 992px) {
+    #news {
+        display: none;
+    }
+    #toggle-notification-button {
+        display: none;
+    }
+}
+
 .eventcontent h2 {
     text-align: center;
 }
@@ -52,8 +61,8 @@ page-home {}
     right: 5px;
     width: 60px;
     height: 60px;
-	box-shadow: -4px 4px 3px rgba(0,0,0,0.2);
-	border-radius:100px;
+    box-shadow: -4px 4px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
 }
 
 button.toggle-notification {
@@ -69,5 +78,5 @@ button.toggle-notification {
 }
 
 .EventTitle {
-	text-align: center !important;
+    text-align: center !important;
 }
