@@ -20,9 +20,10 @@ h2 {
     float: right;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1180px) {
+    //992px
     .highscorewidth {
-        width: 80%;
+        width: 90%;
         margin: 2% auto;
     }
 }
@@ -40,4 +41,10 @@ h2 {
 #praemien-info {
     //background-color: lightgrey;
     border: 2px solid #DAA520;
+}
+
+ion-list-header ion-note {
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
 }
